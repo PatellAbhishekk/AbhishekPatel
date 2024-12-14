@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaSkullCrossbones } from "react-icons/fa";
 import { Link } from "react-scroll";
+import logo from "../Assets/logo.png";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -32,11 +33,7 @@ function Navbar() {
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white">
         <div className="flex justify-between items-center h-16">
           <div className="flex space-x-2">
-            <img
-              src="https://avatars.githubusercontent.com/u/176313815?v=4"
-              className="h-12 w-12 rounded-full"
-              alt=""
-            />
+            <img src={logo} className="h-12 w-12 rounded-full" alt="" />
             <h1 className="font-semibold text-xl cursor-pointer">
               Abishe<span className="text-green-500 text-2xl">k</span>
               <p className="text-sm">Web Developer</p>
