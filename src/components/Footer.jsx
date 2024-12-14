@@ -21,9 +21,14 @@ function Footer() {
             <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
               <p className="text-sm">
                 &copy; <span id="year">{new Date().getFullYear()}</span> . All
-                rights reserved.
+                <a
+                  href="https://raw.githubusercontent.com/PatellAbhishekk/React-Portfolio/refs/heads/main/LICENSE"
+                  target="_blank"
+                >
+                  rights reserved.
+                </a>
               </p>
-              <p className="text-sm">Supportive Partner ❤️ Abhishek</p>
+              <p className="text-sm">Supportive Partner ❤️ Abhishek Patel</p>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
 
 import { ReactTyped } from "react-typed";
 
@@ -50,28 +51,57 @@ function Home() {
                 <h1 className="font-bold text-center">Available on</h1>
                 <ul className="flex space-x-5">
                   <li>
-                    <a href="https://www.linkedin.com/" target="_blank">
-                      <FaLinkedin className="text-2xl cursor-pointer text-blue-600" />
+                    <a
+                      href="https://www.linkedin.com/in/patel24/"
+                      target="_blank"
+                    >
+                      <FaLinkedin
+                        className="text-2xl cursor-pointer text-blue-600"
+                        size={30}
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.github.com/" target="_blank">
-                      <FaGithub className="text-2xl cursor-pointer" />
+                    <a
+                      href="https://github.com/PatellAbhishekk "
+                      target="_blank"
+                    >
+                      <FaGithub className="text-2xl cursor-pointer" size={30} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.telegram.com/" target="_blank">
-                      <FaTelegramPlane className="text-2xl cursor-pointer text-sky-600" />
+                    <a href="https://t.me/Itzzpatel24" target="_blank">
+                      <FaTelegramPlane
+                        className="text-2xl cursor-pointer text-sky-600"
+                        size={30}
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="https://t.me/" target="_blank">
-                      <FiYoutube className="text-2xl cursor-pointer text-red-600" />
+                    <a href="https://www.youtube.com/@patel4me" target="_blank">
+                      <FiYoutube
+                        className="text-2xl cursor-pointer text-red-600"
+                        size={30}
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="https://t.me/" target="_blank">
-                      <FaXTwitter className="text-2xl cursor-pointer" />
+                    <a href="https://x.com/PatellAbhishekk" target="_blank">
+                      <FaXTwitter
+                        className="text-2xl cursor-pointer"
+                        size={30}
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/patel24/"
+                      target="_blank"
+                    >
+                      <TbFileCv
+                        className="text-2xl cursor-pointer text-blue-600"
+                        size={30}
+                      />
                     </a>
                   </li>
                 </ul>
@@ -79,10 +109,22 @@ function Home() {
               <div className=" space-y-2">
                 <h1 className="font-bold text-center">Currently working on</h1>
                 <div className="flex space-x-5">
-                  <SiMongodb className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-600" />
-                  <SiExpress className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer" />
-                  <FaReact className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-sky-500" />
-                  <FaNodeJs className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-800" />
+                  <SiMongodb
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-600"
+                    size={30}
+                  />
+                  <SiExpress
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer"
+                    size={30}
+                  />
+                  <FaReact
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-sky-500"
+                    size={30}
+                  />
+                  <FaNodeJs
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-800"
+                    size={30}
+                  />
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@ import mongoDB from "../Assets/mongodb.png";
 import express from "../Assets/expressJs.png";
 import reactjs from "../Assets/react.png";
 import nodejs from "../Assets/nodejs.png";
-function PortFolio() {
+function Project() {
   const cardItem = [
     {
       id: 1,
@@ -28,11 +28,11 @@ function PortFolio() {
   ];
   return (
     <div
-      id="Portfolio"
+      id="Project"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
     >
       <div>
-        <h1 className="text-3xl font-bold mb-5">PortFolio</h1>
+        <h1 className="text-3xl font-bold mb-5">Projects</h1>
         <span className=" underline font-semibold">Featured Projects</span>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
           {cardItem.map(({ id, logo, name }) => (
@@ -67,4 +67,4 @@ function PortFolio() {
   );
 }
 
-export default PortFolio;
+export default Project;
