@@ -96,7 +96,7 @@ function Home() {
                   </li>
                   <li>
                     <a
-                      href="https://www.linkedin.com/in/patel24/"
+                      href="https://drive.google.com/file/d/1iar31eIubwhjXMEvO_6QrZcJX-SWYTB3/view"
                       target="_blank"
                     >
                       <TbFileCv
