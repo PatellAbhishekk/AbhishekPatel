@@ -1,4 +1,5 @@
 import React from "react";
+import abhishek from "../Assets/abhishek.jpg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -132,7 +133,7 @@ function Home() {
           {/* right side */}
           <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
             <img
-              src="https://raw.githubusercontent.com/PatellAbhishekk/Portfolio/refs/heads/main/src/assets/abhishek.jpg"
+              src={abhishek}
               alt="PatellAbhishekk"
               className="rounded-full md:w-[450px] md:h-[500px] auto-fill"
             />
