@@ -28,7 +28,7 @@ function Home() {
               <h1>Hello, I'm a </h1>
               {/* Typed Text */}
               <ReactTyped
-                className="text-red-700 font-bold"
+                className="text-red-700"
                 strings={[" Developer", " Programmer", " Coder"]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -49,7 +49,7 @@ function Home() {
             {/* Social Links */}
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
               <div className="space-y-2">
-                <h1 className="font-bold text-center">Available on</h1>
+                <h1 className="text-center">Available on</h1>
                 <ul className="flex space-x-5">
                   <li>
                     <a
@@ -108,7 +108,7 @@ function Home() {
                 </ul>
               </div>
               <div className=" space-y-2">
-                <h1 className="font-bold text-center">Currently working on</h1>
+                <h1 className="text-center">Currently working on</h1>
                 <div className="flex space-x-5">
                   <SiMongodb
                     className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-600"

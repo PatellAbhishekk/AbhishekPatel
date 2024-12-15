@@ -7,7 +7,7 @@ function About() {
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
     >
       <div>
-        <h1 className="text-3xl font-bold mb-5">About</h1>
+        <h1 className="text-3xl mb-5">About</h1>
         <p>
           Aspiring Web developer with a passion for creating visually stunning
           and user-friendly websites.
@@ -17,7 +17,7 @@ function About() {
           Education & Training
         </h1>
         <span>
-          1. Mern FullStack Web Developer → Quality Software Technology → 2024{" "}
+          1. Mern FullStack Web Developer → Quality Software Technology → 2024
           <br />
           2. Bsc in Botany → Ramnirajan Junjunwala College → 2023
         </span>
@@ -67,16 +67,29 @@ function About() {
           Achievements & Awards
         </h1>
         <span>
-          1. <strong>Web Development Basics</strong> from Springboard (by
-          Infosys): Successfully built and deployed dynamic, responsive web
-          applications using HTML, CSS, JavaScript, and Git, developed CRUD
-          apps, integrated APIs, and received positive feedback for clean,
-          efficient code while earning certification in Web Development Basics.
+          <a
+            href="https://skillsoft.digitalbadges.skillsoft.com/46027e79-7200-4c19-a7f6-7ce675fd76ce#acc.4YPn61hg"
+            target="_blank"
+            className="text-red-600"
+          >
+            <strong>1. Web Development Basics</strong>
+          </a>
+          from Springboard (by Infosys): Successfully built and deployed
+          dynamic, responsive web applications using HTML, CSS, JavaScript, and
+          Git, developed CRUD apps, integrated APIs, and received positive
+          feedback for clean, efficient code while earning certification in Web
+          Development Basics.
           <br />
-          2. <strong>JavaScript Novice to Professional</strong> course by
-          Infosys Springboard, gaining expertise in core JavaScript concepts,
-          DOM manipulation, asynchronous programming, and building dynamic web
-          applications with hands-on projects.
+          <a
+            href="https://skillsoft.digitalbadges.skillsoft.com/51441f46-7db9-4a4e-9622-a207bce0e5da#acc.xYakFzwR"
+            target="_blank"
+            className="text-red-600"
+          >
+            <strong>2. JavaScript Novice to Professional</strong>
+          </a>
+          course by Infosys Springboard, gaining expertise in core JavaScript
+          concepts, DOM manipulation, asynchronous programming, and building
+          dynamic web applications with hands-on projects.
         </span>
         <br />
         <br />
