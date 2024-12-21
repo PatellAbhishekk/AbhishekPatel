@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.7.1",
     "axios": "^1.7.9",
     "npm": "^10.9.2",
     "react": "^18.3.1",

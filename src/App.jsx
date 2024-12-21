@@ -7,11 +7,13 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
+import Particle from "../src/components/Particles";
 
 function App() {
   return (
     <>
-      <div className="bg-slate-50">
+      <Particle />
+      <div>
         <Navbar />
         <Home />
         <About />

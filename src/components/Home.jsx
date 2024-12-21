@@ -131,7 +131,7 @@ function Home() {
             </div>
           </div>
           {/* right side */}
-          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
+          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1 z-10">
             <img
               src={abhishek}
               alt="PatellAbhishekk"

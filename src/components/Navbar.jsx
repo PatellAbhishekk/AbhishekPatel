@@ -39,7 +39,7 @@ function Navbar() {
               alt="PatellAbhishekk"
             />
             <h1 className="font-semibold text-xl cursor-pointer">
-              Abhishe<span className="text-green-500 text-2xl">k</span>
+              Abhishe<span className="text-blue-500 text-2xl">k</span>
               <p className="text-sm">Web Developer</p>
             </h1>
           </div>
