@@ -63,7 +63,7 @@ function Project() {
               textColor,
             }) => (
               <div
-                className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300 z-10"
+                className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-110 duration-300 z-10 backdrop-blur-lg bg-transparent border-white/10 hover:bg-white/20"
                 key={id}
               >
                 <img

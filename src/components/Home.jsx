@@ -10,7 +10,6 @@ import { SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
-
 import { ReactTyped } from "react-typed";
 
 function Home() {
@@ -18,7 +17,7 @@ function Home() {
     <>
       <div
         id="Home"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28"
+        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28 z-10"
       >
         <div className="flex flex-col md:flex-row">
           {/* left side */}
@@ -64,7 +63,7 @@ function Home() {
                   </li>
                   <li>
                     <a
-                      href="https://github.com/PatellAbhishekk "
+                      href="https://github.com/PatellAbhishekk"
                       target="_blank"
                     >
                       <FaGithub className="text-2xl cursor-pointer" size={30} />
@@ -107,7 +106,7 @@ function Home() {
                   </li>
                 </ul>
               </div>
-              <div className=" space-y-2">
+              <div className="space-y-2">
                 <h1 className="text-center">Currently working on</h1>
                 <div className="flex space-x-5">
                   <SiMongodb
@@ -135,7 +134,7 @@ function Home() {
             <img
               src={abhishek}
               alt="PatellAbhishekk"
-              className="rounded-full md:w-[450px] md:h-[500px] auto-fill"
+              className="max-w-xs h-auto object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black"
             />
           </div>
         </div>
