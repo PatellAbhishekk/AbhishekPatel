@@ -134,7 +134,7 @@ function Home() {
             <img
               src={abhishek}
               alt="PatellAbhishekk"
-              className="max-w-xs h-auto object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black"
+              className="max-w-xs mobile:ml-[8px] tablet:ml-[130px] laptop:ml-[-35px] desktop:ml-[101px]   object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black"
             />
           </div>
         </div>
