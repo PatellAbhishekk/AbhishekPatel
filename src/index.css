@@ -6,3 +6,9 @@
 body {
   font-family: "Fredoka", sans-serif;
 }
+
+@layer base {
+  body {
+    @apply select-none;
+  }
+}

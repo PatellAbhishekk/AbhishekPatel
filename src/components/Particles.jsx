@@ -71,7 +71,7 @@ const ParticleDesign = () => {
                   default: "bounce",
                 },
                 random: false,
-                speed: 7,
+                speed: 5,
                 straight: false,
               },
               number: {
@@ -79,7 +79,7 @@ const ParticleDesign = () => {
                   enable: true,
                   area: 800,
                 },
-                value: 50,
+                value: 60,
               },
               opacity: {
                 value: 0.5,

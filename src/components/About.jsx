@@ -1,4 +1,5 @@
 import React from "react";
+import Patel from "../Assets/patel.png";
 
 function About() {
   return (
@@ -13,38 +14,56 @@ function About() {
           and user-friendly websites.
         </p>
         <br />
-        <h1 className="text-green-600 font-semibold text-xl">
-          Education & Training
-        </h1>
-        <span>
-          1. Mern FullStack Web Developer → Quality Software Technology → 2024
-          <br />
-          2. Bsc in Botany → Ramnirajan Junjunwala College → 2023
-        </span>
+
+        {/* Education & Training Section */}
+        <div>
+          <div>
+            <h1 className="text-green-600 font-semibold text-xl">
+              Education & Training
+            </h1>
+            <span>
+              1. Mern FullStack Web Developer → Quality Software Technology →
+              2024
+              <br />
+              2. Bsc in Botany → Ramnirajan Junjunwala College → 2023
+            </span>
+          </div>
+          {/* <img
+            src={Patel}
+            alt="PatellAbhishekk"
+            className="flex flex-col w-44"
+          /> */}
+        </div>
         <br />
-        <br />
-        <h1 className="text-green-600 font-semibold text-xl">
-          Skills & Expertise
-        </h1>
-        <span>
-          1. Frontend Development: React.js, HTML5, CSS3, Tailwind CSS,
-          Bootstrap
-          <br />
-          2. Backend Development: Node.js, Express.js, RESTful API design
-          <br />
-          3. Database: MongoDB, Mongoose ORM State Management: Redux, Context
-          API Version
-          <br />
-          4. Control: Git, GitHub Deployment: Heroku, Vercel, Netlify,
-          AWS,Cloudflare
-          <br />
-          5. Authentication: JWT, OAuth Testing: Jest, Postman, React Testing
-          <br />
-          6. Library Soft Skills: Problem-solving, effective communication,
-          continuous learning
-        </span>
-        <br />
-        <br />
+
+        {/* Skills & Expertise Section */}
+        <div className="flex items-center justify-between gap-5 mb-10">
+          <div>
+            <h1 className="text-green-600 font-semibold text-xl">
+              Skills & Expertise
+            </h1>
+            <span>
+              1. Frontend Development: React.js, HTML5, CSS3, Tailwind CSS,
+              Bootstrap
+              <br />
+              2. Backend Development: Node.js, Express.js, RESTful API design
+              <br />
+              3. Database: MongoDB, Mongoose ORM State Management: Redux,
+              Context API Version
+              <br />
+              4. Control: Git, GitHub Deployment: Heroku, Vercel, Netlify,
+              AWS,Cloudflare
+              <br />
+              5. Authentication: JWT, OAuth Testing: Jest, Postman, React
+              Testing
+              <br />
+              6. Library Soft Skills: Problem-solving, effective communication,
+              continuous learning
+            </span>
+          </div>
+        </div>
+
+        {/* Other Sections */}
         <h1 className="text-green-600 font-semibold text-xl">
           Professional Experience
         </h1>
@@ -54,12 +73,16 @@ function About() {
           responsive user interfaces and robust backend systems.
           <br />
           2. Built RESTful APIs for seamless integration between frontend and
-          backend, ensuring high performance and scalability. 3. Deployed
-          applications to cloud platforms like Heroku, Vercel, and Netlify,
-          ensuring reliable performance and uptime. 4. Managed version control
-          using Git and GitHub, enabling efficient collaboration and code
-          management across teams. 5. Optimized frontend performance using best
-          practices in React, reducing load times and enhancing user experience.
+          backend, ensuring high performance and scalability.
+          <br />
+          3. Deployed applications to cloud platforms like Heroku, Vercel, and
+          Netlify, ensuring reliable performance and uptime.
+          <br />
+          4. Managed version control using Git and GitHub, enabling efficient
+          collaboration and code management across teams.
+          <br />
+          5. Optimized frontend performance using best practices in React,
+          reducing load times and enhancing user experience.
         </span>
         <br />
         <br />
@@ -109,4 +132,5 @@ function About() {
     </div>
   );
 }
+
 export default About;
