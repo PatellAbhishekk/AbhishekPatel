@@ -62,7 +62,14 @@ const ParticleDesign = () => {
             },
             particles: {
               color: {
-                value: "#0066ff",
+                value: [
+                  "#ff0000",
+                  "#00ff00",
+                  "#0000ff",
+                  "#ff00ff",
+                  "#00ffff",
+                  "#ffff00",
+                ], // Random colors
               },
               move: {
                 direction: "none",
@@ -79,16 +86,16 @@ const ParticleDesign = () => {
                   enable: true,
                   area: 800,
                 },
-                value: 60,
+                value: 80,
               },
               opacity: {
                 value: 0.5,
               },
               shape: {
-                type: "star",
+                type: ["circle", "triangle", "square", "polygon", "star"], // Random shapes
               },
               size: {
-                value: { min: 1, max: 5 },
+                value: { min: 1, max: 7 },
               },
             },
             detectRetina: true,

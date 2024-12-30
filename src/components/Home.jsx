@@ -17,7 +17,7 @@ function Home() {
     <>
       <div
         id="Home"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28 z-10"
+        className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-28 mb-18 z-10"
       >
         <div className="flex flex-col md:flex-row">
           {/* left side */}
@@ -134,12 +134,11 @@ function Home() {
             <img
               src={abhishek}
               alt="PatellAbhishekk"
-              className="max-w-xs mobile:ml-[8px] tablet:ml-[130px] laptop:ml-[-35px] desktop:ml-[101px]   object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black"
+              className="max-w-xs mobile:ml-[25px] tablet:ml-[130px] laptop:ml-[-35px] desktop:ml-[101px]   object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black"
             />
           </div>
         </div>
       </div>
-
       <hr />
     </>
   );

@@ -51,7 +51,9 @@ function Contact() {
                 type="text"
                 placeholder="Enter your fullname"
               />
-              {errors.name && <span>This field is required</span>}
+              {errors.name && (
+                <span className="text-red-700">This field is required</span>
+              )}
             </div>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Email Address</label>
@@ -63,7 +65,9 @@ function Contact() {
                 type="text"
                 placeholder="Enter your email address"
               />
-              {errors.email && <span>This field is required</span>}
+              {errors.email && (
+                <span className="text-red-700">This field is required</span>
+              )}
             </div>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Message</label>
@@ -75,11 +79,13 @@ function Contact() {
                 type="text"
                 placeholder="Enter your Query"
               />
-              {errors.message && <span>This field is required</span>}
+              {errors.message && (
+                <span className="text-red-700">This field is required</span>
+              )}
             </div>
             <button
               type="submit"
-              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300"
+              className="bg-green-700 text-white rounded-xl px-3 py-2 hover:bg-green-900 duration-300"
             >
               Send
             </button>
