@@ -28,10 +28,16 @@ function Home() {
               {/* Typed Text */}
               <ReactTyped
                 className="text-red-700"
-                strings={[" Developer", " Programmer", " Coder"]}
-                typeSpeed={40}
-                backSpeed={50}
+                strings={["Developer", "Programmer", "Coder"]}
+                typeSpeed={50}
+                backSpeed={60}
                 loop={true}
+                showCursor={true}
+                cursorChar="|"
+                backDelay={1000}
+                startDelay={500}
+                fadeOut={true}
+                fadeOutDelay={300}
               />
             </div>
             <br />

@@ -4,6 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 const ParticleDesign = () => {
   const [init, setInit] = useState(false);
+  const [particlesLoadedStatus, setParticlesLoadedStatus] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -13,8 +14,8 @@ const ParticleDesign = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log("Particles container:", container);
+  const particlesLoaded = () => {
+    setParticlesLoadedStatus(true); // Update state when particles are loaded
   };
 
   return (
@@ -34,7 +35,7 @@ const ParticleDesign = () => {
           options={{
             background: {
               // color: {
-              //   value: "#f8fafc",
+              //   value: "#f8fafc", // Optional background color
               // },
             },
             fpsLimit: 120,
@@ -102,6 +103,8 @@ const ParticleDesign = () => {
           }}
         />
       )}
+      {particlesLoadedStatus && <p>Particles Loaded!</p>}{" "}
+      {/* Display when particles are loaded */}
     </>
   );
 };

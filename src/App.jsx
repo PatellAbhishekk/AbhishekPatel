@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import Particle from "../src/components/Particles";
+import ConsoleDesign from "./ConsoleDesign";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Footer />
       </div>
       <Toaster />
+      <ConsoleDesign />
     </>
   );
 }
