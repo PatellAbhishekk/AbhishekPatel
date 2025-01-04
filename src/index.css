@@ -12,3 +12,24 @@ body {
     @apply select-none;
   }
 }
+/* Light Mode (default) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.bg-slate-100 {
+  background-color: #f8fafc; /* Light gray */
+}
+
+.bg-gray-800 {
+  background-color: #2d3748; /* Dark gray */
+}
+
+/* You can add more customizations for light and dark mode */

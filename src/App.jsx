@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,14 +11,31 @@ import Particle from "../src/components/Particles";
 import ConsoleDesign from "./ConsoleDesign";
 
 function App() {
+  const [theme, setTheme] = useState("light"); // Manage theme state
+
+  // Toggle theme
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  // Apply theme to body element
+  useEffect(() => {
+    document.body.classList.remove(theme === "light" ? "dark" : "light");
+    document.body.classList.add(theme);
+  }, [theme]);
+
   return (
     <>
       <Particle />
       <div
-        className="bg-slate-100 min-h-screen"
+        className={`animated-gradient min-h-screen ${
+          theme === "dark"
+            ? "text-white bg-gray-900"
+            : "text-black bg-slate-100"
+        }`}
         onContextMenu={(e) => e.preventDefault()}
       >
-        <Navbar />
+        <Navbar toggleTheme={toggleTheme} theme={theme} />
         <Home />
         <About />
         <Project />
