@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import Submit from "./Submit";
 
 function Contact() {
   const {
@@ -83,11 +84,8 @@ function Contact() {
                 <span className="text-red-700">This field is required</span>
               )}
             </div>
-            <button
-              type="submit"
-              className="bg-green-700 text-white rounded-xl px-3 py-2 hover:bg-green-900 duration-300"
-            >
-              Send
+            <button type="submit">
+              <Submit />
             </button>
           </form>
         </div>
