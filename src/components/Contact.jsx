@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import Submit from "./Submit";
+import Submit from "../components/Submit";
 
 function Contact({ theme }) {
   const {

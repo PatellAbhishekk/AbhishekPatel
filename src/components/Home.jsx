@@ -17,27 +17,21 @@ function Home() {
     <>
       <div
         id="Home"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-28 mb-18 z-10"
+        className="min-h-screen max-w-screen-2xl container mx-auto px-4 md:px-20  flex items-center justify-center"
       >
-        <div className="flex flex-col md:flex-row">
-          {/* left side */}
-          <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
+        <div className="flex flex-col md:flex-row  w-full">
+          {/* Left side */}
+          <div className="md:w-1/2 space-y-2 order-2 md:order-1 text-center md:text-left mt-[110px]">
             <span className="text-xl">Welcome In My Feed</span>
-            <div className="flex space-x-1 text-2xl md:text-4xl">
+            <div className="flex space-x-1 text-2xl md:text-4xl justify-center md:justify-start">
               <h1>Hello, I'm a </h1>
               {/* Typed Text */}
               <ReactTyped
                 className="text-red-700"
-                strings={["Developer", "Programmer", "Coder"]}
-                typeSpeed={50}
-                backSpeed={60}
+                strings={[" Developer", " Programmer", " Coder"]}
+                typeSpeed={40}
+                backSpeed={50}
                 loop={true}
-                showCursor={true}
-                cursorChar="|"
-                backDelay={1000}
-                startDelay={500}
-                fadeOut={true}
-                fadeOutDelay={300}
               />
             </div>
             <br />
@@ -55,7 +49,7 @@ function Home() {
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
               <div className="space-y-2">
                 <h1 className="text-center">Available on</h1>
-                <ul className="flex space-x-5">
+                <ul className="flex space-x-5 justify-center">
                   <li>
                     <a
                       href="https://www.linkedin.com/in/patel24/"
@@ -114,7 +108,7 @@ function Home() {
               </div>
               <div className="space-y-2">
                 <h1 className="text-center">Currently working on</h1>
-                <div className="flex space-x-5">
+                <div className="flex space-x-5 justify-center">
                   <SiMongodb
                     className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-600"
                     size={30}
@@ -135,16 +129,17 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* right side */}
-          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1 z-10">
+          {/* Right side */}
+          <div className="md:w-1/2 md:ml-40 md:mt-10 sm:ml-48 order-1 z-10 ">
             <img
               src={abhishek}
               alt="PatellAbhishekk"
-              className="max-w-xs mobile:ml-[25px] tablet:ml-[130px] laptop:ml-[-35px] desktop:ml-[101px]   object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black"
+              className="max-w-xs h-auto object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black mx-auto [@media_only_screen_and(max-width:375px)]:mt-[105px]"
             />
           </div>
         </div>
       </div>
+
       <hr />
     </>
   );

@@ -35,6 +35,7 @@ const StyledWrapper = styled.div`
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 2px solid #494a4b;
+    color: black; /* Ensure text color is always black */
   }
 
   .button:active {
