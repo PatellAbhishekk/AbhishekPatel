@@ -18,7 +18,6 @@ const StyledWrapper = styled.div`
     border: none;
     transform: rotate(5deg);
     transform-origin: center;
-    font-family: "Gochi Hand", cursive;
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
