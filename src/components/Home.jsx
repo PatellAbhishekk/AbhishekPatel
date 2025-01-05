@@ -130,11 +130,11 @@ function Home() {
             </div>
           </div>
           {/* Right side */}
-          <div className="md:w-1/2 md:ml-40 md:mt-10 sm:ml-48 order-1 z-10 ">
+          <div className="md:w-1/2 md:ml-40 md:mt-2 sm:ml-48 order-1 z-10">
             <img
               src={abhishek}
               alt="PatellAbhishekk"
-              className="max-w-xs h-auto object-cover shadow-lg transform transition-all duration-300 hover:scale-105 animate-shape-change-shake border-2 border-black mx-auto [@media_only_screen_and(max-width:375px)]:mt-[105px]"
+              className="max-w-xs h-auto object-cover shadow-lg transform transition-all duration-300 animate-shape-change-shake border-2 border-black dark:border-white mx-auto mt-16 md:mt-2 sm:mt-24"
             />
           </div>
         </div>

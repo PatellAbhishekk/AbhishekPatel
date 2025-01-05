@@ -40,9 +40,6 @@ function App() {
         <Experience theme={theme} />
         <Contact theme={theme} />
         <Footer theme={theme} />
-
-        {/* Add Switch component for theme toggle */}
-        <Switch toggleTheme={toggleTheme} />
       </div>
       <Toaster />
     </>

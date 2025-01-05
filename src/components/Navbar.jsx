@@ -3,7 +3,7 @@ import { TiThMenuOutline } from "react-icons/ti";
 import { FaSkullCrossbones } from "react-icons/fa";
 import { Link } from "react-scroll";
 import Logo from "../components/Logo";
-import Toggle from "../components/Toggle"; // Import Toggle component
+import Toggle from "../components/Toggle";
 
 function Navbar({ theme, toggleTheme }) {
   const [menu, setMenu] = useState(false);
@@ -17,12 +17,13 @@ function Navbar({ theme, toggleTheme }) {
 
   return (
     <div
-      className={`max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 ${
+      className={`max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-lg fixed top-0 left-0 right-0 z-50 ${
         theme === "dark" ? "bg-gray-800 text-white" : "bg-slate-200 text-black"
       }`}
     >
       <div className="flex justify-between items-center h-16">
-        <div className="flex space-x-2">
+        {/* Logo Section */}
+        <div className="flex items-center space-x-2">
           <Logo />
           <h1 className="font-semibold text-xl cursor-pointer">
             Abhishe<span className="text-blue-500 text-2xl">k</span>
@@ -31,51 +32,68 @@ function Navbar({ theme, toggleTheme }) {
         </div>
 
         {/* Desktop Navbar */}
-        <div>
-          <ul className="hidden md:flex space-x-8">
-            {navItems.map(({ id, text }) => (
-              <li
-                className="relative group cursor-pointer hover:text-blue-700"
-                key={id}
+        <ul className="hidden md:flex items-center space-x-8">
+          {navItems.map(({ id, text }) => (
+            <li
+              className="relative group cursor-pointer hover:text-blue-700"
+              key={id}
+            >
+              <Link
+                onClick={() => setMenu(false)}
+                to={text}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                activeClass="active"
               >
-                <Link
-                  onClick={() => setMenu(!menu)}
-                  to={text}
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  activeClass="active"
-                >
-                  {text}
-                </Link>
-                <span className="absolute bottom-0 left-0 block h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-              </li>
-            ))}
-          </ul>
-          <div onClick={() => setMenu(!menu)} className="md:hidden">
-            {menu ? (
-              <FaSkullCrossbones size={24} />
-            ) : (
-              <TiThMenuOutline size={24} />
-            )}
-          </div>
+                {text}
+              </Link>
+              <span className="absolute bottom-0 left-0 block h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Theme Toggle (Visible only on Desktop) */}
+        <div className="hidden md:block">
+          <Toggle theme={theme} toggleTheme={toggleTheme} />
         </div>
 
-        {/* Theme toggle button */}
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        {/* Hamburger Menu */}
+        <div
+          onClick={() => setMenu(!menu)}
+          className="cursor-pointer z-50 md:hidden"
+        >
+          {menu ? (
+            <FaSkullCrossbones size={24} />
+          ) : (
+            <TiThMenuOutline size={24} />
+          )}
+        </div>
       </div>
 
       {/* Mobile Navbar */}
       {menu && (
-        <div className={`${theme === "dark" ? "bg-gray-900" : "bg-slate-50"}`}>
-          <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
+        <div
+          className={`w-full h-screen fixed top-0 left-0 z-40 flex flex-col items-center justify-center ${
+            theme === "dark"
+              ? "bg-gray-900 text-white"
+              : "bg-slate-50 text-black"
+          }`}
+        >
+          {/* Mobile Theme Toggle */}
+          <div className="absolute top-4 left-4">
+            <Toggle theme={theme} toggleTheme={toggleTheme} />
+          </div>
+
+          {/* Navigation Links */}
+          <ul className="flex flex-col items-center space-y-6 text-xl">
             {navItems.map(({ id, text }) => (
               <li
-                className="relative group hover:scale-105 duration-200 font-semibold cursor-pointer"
+                className="relative group font-semibold cursor-pointer"
                 key={id}
               >
                 <Link
-                  onClick={() => setMenu(!menu)}
+                  onClick={() => setMenu(false)}
                   to={text}
                   smooth={true}
                   duration={500}
