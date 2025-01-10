@@ -3,6 +3,7 @@ import Breed from "../Assets/breeds.png";
 import Pokemon from "../Assets/pokemon.png";
 import task from "../Assets/task.png";
 import ContactForm from "../Assets/form.png";
+import Button from "./Button";
 
 function Project() {
   const cardItem = [
@@ -37,9 +38,16 @@ function Project() {
       logo: ContactForm,
       name: "Contact-Form",
       description: "A contact form with validation and email sending feature.",
-      visitLink: "https://untitledform.pages.dev/",
+      visitLink: "https://contact-froms.pages.dev/",
       sourceCodeLink: "https://github.com/PatellAbhishekk/Contact-Form",
       textColor: "text-green-500",
+    },
+    {
+      id: 5,
+      logo: null, // No image for the "More" card
+      name: "More Projects",
+      description: "Explore additional projects and work.",
+      buttonOnly: true, // Add a flag to identify this card
     },
   ];
 
@@ -61,36 +69,52 @@ function Project() {
               visitLink,
               sourceCodeLink,
               textColor,
+              buttonOnly,
             }) => (
               <div
-                className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-110 duration-300 z-10 backdrop-blur-lg bg-transparent border-white/10 hover:bg-white/20"
+                className={`md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-110 duration-300 z-10 backdrop-blur-lg bg-transparent border-white/10 ${
+                  buttonOnly
+                    ? "flex items-center justify-center"
+                    : "hover:bg-white/20"
+                }`}
                 key={id}
               >
-                <img
-                  src={logo}
-                  className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                  alt={name}
-                />
-                <div>
-                  <span className={`${textColor} text-xl ml-2`}>{name}</span>
-                  <p className={`${textColor} px-2`}>{description}</p>
-                </div>
-                <div className="px-6 py-4 space-x-3 justify-around">
-                  <a href={visitLink} target="_blank" rel="noopener noreferrer">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
-                      Visit
-                    </button>
-                  </a>
-                  <a
-                    href={sourceCodeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
-                      Source code
-                    </button>
-                  </a>
-                </div>
+                {!buttonOnly && (
+                  <>
+                    <img
+                      src={logo}
+                      className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
+                      alt={name}
+                    />
+                    <div>
+                      <span className={`${textColor} text-xl ml-2`}>
+                        {name}
+                      </span>
+                      <p className={`${textColor} px-2`}>{description}</p>
+                    </div>
+                    <div className="px-6 py-4 space-x-3 justify-around">
+                      <a
+                        href={visitLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                          Visit
+                        </button>
+                      </a>
+                      <a
+                        href={sourceCodeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
+                          Source code
+                        </button>
+                      </a>
+                    </div>
+                  </>
+                )}
+                {buttonOnly && <Button />}
               </div>
             )
           )}

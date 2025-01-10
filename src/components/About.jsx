@@ -1,6 +1,4 @@
 import React from "react";
-import Patel from "../Assets/patel.png";
-
 function About() {
   return (
     <div
@@ -28,12 +26,8 @@ function About() {
               2. Bsc in Botany → Ramnirajan Junjunwala College → 2023
             </span>
           </div>
-          {/* <img
-            src={Patel}
-            alt="PatellAbhishekk"
-            className="flex flex-col w-44"
-          /> */}
         </div>
+
         <br />
 
         {/* Skills & Expertise Section */}
