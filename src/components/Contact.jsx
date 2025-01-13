@@ -119,9 +119,9 @@ function Contact({ theme }) {
               <span className="text-red-700">This field is required</span>
             )}
           </div>
-          <button type="submit">
+          <span type="submit">
             <Submit />
-          </button>
+          </span>
         </form>
       </div>
     </div>
