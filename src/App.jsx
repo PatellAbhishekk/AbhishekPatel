@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 
 import { Toaster } from "react-hot-toast";
 import Particle from "../src/components/Particles";
+import ConsoleDesign from "./ConsoleDesign"; // Import ConsoleDesign component
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -28,8 +29,8 @@ function App() {
 
   return (
     <>
+      <ConsoleDesign /> {/* Add ConsoleDesign here */}
       {loading && <Loader />} {/* Show loader when loading */}
-      {/* Only show the content when loading is false */}
       {!loading && (
         <div
           className={`min-h-screen ${
