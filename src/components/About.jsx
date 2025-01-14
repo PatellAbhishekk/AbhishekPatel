@@ -1,4 +1,5 @@
 import React from "react";
+import Wait from "./Wait";
 function About() {
   return (
     <div
@@ -29,10 +30,9 @@ function About() {
         </div>
 
         <br />
-
         {/* Skills & Expertise Section */}
-        <div className="flex items-center justify-between gap-5 mb-10">
-          <div>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 mb-10">
+          <div className="flex-1">
             <h1 className="text-green-600 font-semibold text-xl">
               Skills & Expertise
             </h1>
@@ -45,8 +45,8 @@ function About() {
               3. Database: MongoDB, Mongoose ORM State Management: Redux,
               Context API Version
               <br />
-              4. Control: Git, GitHub Deployment: Heroku, Vercel, Netlify,
-              AWS,Cloudflare
+              4. Control: Git, GitHub Deployment: Heroku, Vercel, Netlify, AWS,
+              Cloudflare
               <br />
               5. Authentication: JWT, OAuth Testing: Jest, Postman, React
               Testing
@@ -54,6 +54,9 @@ function About() {
               6. Library Soft Skills: Problem-solving, effective communication,
               continuous learning
             </span>
+          </div>
+          <div className="md:ml-5 mt-5 md:mt-0">
+            <Wait />
           </div>
         </div>
 
