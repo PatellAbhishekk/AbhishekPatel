@@ -40,7 +40,7 @@ function Navbar({ theme, toggleTheme }) {
             >
               <Link
                 onClick={() => setMenu(false)}
-                to={text}
+                to={text.toLowerCase()} // Match the section ID (lowercase)
                 smooth={true}
                 duration={500}
                 offset={-70}
@@ -94,7 +94,7 @@ function Navbar({ theme, toggleTheme }) {
               >
                 <Link
                   onClick={() => setMenu(false)}
-                  to={text}
+                  to={text.toLowerCase()} // Match the section ID (lowercase)
                   smooth={true}
                   duration={500}
                   offset={-70}

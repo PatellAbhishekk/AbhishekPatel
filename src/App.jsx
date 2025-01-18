@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Loader from "./components/Loader"; // Import your loader
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Ensure BrowserRouter is wrapping everything
+import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -7,19 +8,19 @@ import Project from "./components/Project";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
 import { Toaster } from "react-hot-toast";
 import Particle from "../src/components/Particles";
 import ConsoleDesign from "./ConsoleDesign"; // Import ConsoleDesign component
+import MoreProjects from "./Pages/moreProjects"; // Import the MoreProjects component
 
 function App() {
   const [theme, setTheme] = useState("light");
   const [loading, setLoading] = useState(true);
 
-  // Simulate a 10-second loading period
+  // Simulate a loading period
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false); // Hide the loader after 10 seconds
+      setLoading(false);
     }, 5000);
   }, []);
 
@@ -28,29 +29,41 @@ function App() {
   };
 
   return (
-    <>
-      <ConsoleDesign /> {/* Add ConsoleDesign here */}
-      {loading && <Loader />} {/* Show loader when loading */}
-      {!loading && (
-        <div
-          className={`min-h-screen ${
-            theme === "dark"
-              ? "bg-gray-900 text-white"
-              : "bg-slate-200 text-black"
-          }`}
-        >
-          <Particle />
-          <Navbar theme={theme} toggleTheme={toggleTheme} />
-          <Home theme={theme} />
-          <About theme={theme} />
-          <Project theme={theme} />
-          <Experience theme={theme} />
-          <Contact theme={theme} />
-          <Footer theme={theme} />
-        </div>
-      )}
-      <Toaster />
-    </>
+    <Router>
+      {" "}
+      {/* Wrap everything inside Router */}
+      <>
+        <ConsoleDesign />
+        {loading && <Loader />}
+        {!loading && (
+          <div
+            className={`min-h-screen ${
+              theme === "dark"
+                ? "bg-gray-900 text-white"
+                : "bg-slate-200 text-black"
+            }`}
+          >
+            <Particle />
+            <Navbar theme={theme} toggleTheme={toggleTheme} />
+            <Routes>
+              {/* Define Routes for different sections */}
+              <Route path="/" element={<Home theme={theme} />} />
+              <Route path="/about" element={<About theme={theme} />} />
+              <Route path="/projects" element={<Project theme={theme} />} />
+              <Route path="/more-projects" element={<MoreProjects />} />{" "}
+              {/* Add route for More Projects */}
+              <Route
+                path="/experience"
+                element={<Experience theme={theme} />}
+              />
+              <Route path="/contact" element={<Contact theme={theme} />} />
+            </Routes>
+            <Footer theme={theme} />
+          </div>
+        )}
+        <Toaster />
+      </>
+    </Router>
   );
 }
 
