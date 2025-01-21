@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Ensure Link is imported
 import Breed from "../Assets/breeds.png";
 import Pokemon from "../Assets/pokemon.png";
 import task from "../Assets/task.png";
@@ -115,12 +114,7 @@ function Project() {
                     </div>
                   </>
                 )}
-                {buttonOnly && (
-                  <Link to="/more-projects">
-                    <Button />{" "}
-                    {/* Make sure the Button component renders inside the Link */}
-                  </Link>
-                )}
+                {buttonOnly && <Button />}
               </div>
             )
           )}

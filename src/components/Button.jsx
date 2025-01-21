@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const Button = () => {
   return (
     <StyledWrapper>
-      <Link to="/moreProjects" className="button">
+      <button className="button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
           <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z" />
         </svg>
         More Projects
-      </Link>
+      </button>
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
+  /* inspired from this svgbackgrounds.com/ */
   .button {
     width: fit-content;
     display: flex;
@@ -43,7 +43,6 @@ const StyledWrapper = styled.div`
     background-position: left center;
     transition: background 0.3s ease;
     color: #fff;
-    text-decoration: none;
   }
 
   .button:hover {
