@@ -3,7 +3,8 @@ import Breed from "../Assets/breeds.png";
 import Pokemon from "../Assets/pokemon.png";
 import task from "../Assets/task.png";
 import ContactForm from "../Assets/form.png";
-import Button from "./Button";
+import FiskerOcean from "../Assets/fiskerOcean.jpg";
+import Booker from "../Assets/Booker.jpg";
 
 function Project() {
   const cardItem = [
@@ -43,11 +44,23 @@ function Project() {
       textColor: "text-green-500",
     },
     {
-      id: 5,
-      logo: null, // No image for the "More" card
-      name: "More Projects",
-      description: "Explore additional projects and work.",
-      buttonOnly: true, // Add a flag to identify this card
+      id: 4,
+      logo: FiskerOcean,
+      name: "Fisker-Ocean",
+      description:
+        "It's a modern web app built with Next.js, React, and Tailwind CSS, optimized with Turbopack",
+      visitLink: "https://fisker-ocean-omega.vercel.app",
+      sourceCodeLink: "https://github.com/PatellAbhishekk/Fisker-Ocean",
+      textColor: "text-orange-500",
+    },
+    {
+      id: 4,
+      logo: Booker,
+      name: "Booker-App",
+      description:
+        "It's a web application designed to help users organize and manage their books.",
+      visitLink: "https://booker-app-chi.vercel.app",
+      sourceCodeLink: "https://github.com/PatellAbhishekk/BookerApp",
     },
   ];
 
@@ -92,21 +105,13 @@ function Project() {
                       </span>
                       <p className={`${textColor} px-2`}>{description}</p>
                     </div>
-                    <div className="px-6 py-4 space-x-3 justify-around">
-                      <a
-                        href={visitLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                    <div className="px-2 py-4 space-x-3 justify-around">
+                      <a href={visitLink} target="_blank">
                         <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
                           Visit
                         </button>
                       </a>
-                      <a
-                        href={sourceCodeLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={sourceCodeLink} target="_blank">
                         <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
                           Source code
                         </button>
@@ -114,7 +119,6 @@ function Project() {
                     </div>
                   </>
                 )}
-                {buttonOnly && <Button />}
               </div>
             )
           )}
