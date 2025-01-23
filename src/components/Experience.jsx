@@ -1,41 +1,71 @@
 import React from "react";
-import html from "../Assets/html.png";
-import css from "../Assets/css.png";
 import javaScript from "../Assets/Js.png";
 import vite from "../Assets/vite.png";
 import tailwindCss from "../Assets/tailwindCss.png";
-import api from "../Assets/api.png";
+import SASS from "../Assets/sass.png";
+import Git from "../Assets/git.png";
+import GitHub from "../Assets/github.png";
+import Vercel from "../Assets/vercel.svg";
+import Notion from "../Assets/notion.png";
+import CloudFlare from "../Assets/cloudflare.png";
+import AcernityUI from "../Assets/acernityUI.png";
+import API from "../Assets/api.png";
 function Experience() {
   const cardItem = [
     {
       id: 1,
-      logo: html,
-      name: "HTML",
-    },
-    {
-      id: 2,
-      logo: css,
-      name: "CSS",
-    },
-    {
-      id: 3,
       logo: javaScript,
       name: "JavaScript",
     },
     {
-      id: 4,
+      id: 2,
       logo: vite,
       name: "Vite",
     },
     {
-      id: 5,
+      id: 3,
       logo: tailwindCss,
       name: "TailwindCss",
     },
     {
+      id: 4,
+      logo: SASS,
+      name: "SCSS",
+    },
+    {
+      id: 5,
+      logo: Git,
+      name: "Git",
+    },
+    {
       id: 6,
-      logo: api,
-      name: "Api",
+      logo: GitHub,
+      name: "GitHub",
+    },
+    {
+      id: 7,
+      logo: Vercel,
+      name: "Vercel",
+    },
+    {
+      id: 8,
+      logo: Notion,
+      name: "Notion",
+    },
+    {
+      id: 9,
+      logo: CloudFlare,
+      name: "CloudFlare",
+    },
+    {
+      id: 10,
+      logo: AcernityUI,
+      name: "AcernityUI",
+    },
+    {
+      id: 11,
+      logo: API,
+      name: "API",
     },
   ];
   return (

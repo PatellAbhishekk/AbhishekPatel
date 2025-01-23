@@ -56,7 +56,7 @@ function Home() {
                       target="_blank"
                     >
                       <FaLinkedin
-                        className="text-2xl cursor-pointer text-blue-600"
+                        className="text-2xl hover:scale-110 cursor-pointer text-blue-600"
                         size={30}
                       />
                     </a>
@@ -66,13 +66,16 @@ function Home() {
                       href="https://github.com/PatellAbhishekk"
                       target="_blank"
                     >
-                      <FaGithub className="text-2xl cursor-pointer" size={30} />
+                      <FaGithub
+                        className="text-2xl hover:scale-110 cursor-pointer"
+                        size={30}
+                      />
                     </a>
                   </li>
                   <li>
                     <a href="https://t.me/Itzzpatel24" target="_blank">
                       <FaTelegramPlane
-                        className="text-2xl cursor-pointer text-sky-600"
+                        className="text-2xl hover:scale-110 cursor-pointer text-sky-600"
                         size={30}
                       />
                     </a>
@@ -80,7 +83,7 @@ function Home() {
                   <li>
                     <a href="https://www.youtube.com/@patel4me" target="_blank">
                       <FiYoutube
-                        className="text-2xl cursor-pointer text-red-600"
+                        className="text-2xl hover:scale-110 cursor-pointer text-red-600"
                         size={30}
                       />
                     </a>
@@ -88,7 +91,7 @@ function Home() {
                   <li>
                     <a href="https://x.com/PatellAbhishekk" target="_blank">
                       <FaXTwitter
-                        className="text-2xl cursor-pointer"
+                        className="text-2xl hover:scale-110 cursor-pointer"
                         size={30}
                       />
                     </a>
@@ -99,7 +102,7 @@ function Home() {
                       target="_blank"
                     >
                       <TbFileCv
-                        className="text-2xl cursor-pointer text-blue-600"
+                        className="text-2xl hover:scale-110 cursor-pointer text-blue-600"
                         size={30}
                       />
                     </a>
@@ -110,19 +113,19 @@ function Home() {
                 <h1 className="text-center">Currently working on</h1>
                 <div className="flex space-x-5 justify-center">
                   <SiMongodb
-                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-600"
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 cursor-pointer text-green-600"
                     size={30}
                   />
                   <SiExpress
-                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer"
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 cursor-pointer"
                     size={30}
                   />
                   <FaReact
-                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-sky-500"
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 cursor-pointer text-sky-500"
                     size={30}
                   />
                   <FaNodeJs
-                    className="text-2xl md:text-3xl hover:scale-110 duration-200 rounded-full border-[2px] cursor-pointer text-green-800"
+                    className="text-2xl md:text-3xl hover:scale-110 duration-200 cursor-pointer text-green-800"
                     size={30}
                   />
                 </div>
