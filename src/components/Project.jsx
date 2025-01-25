@@ -5,6 +5,7 @@ import task from "../Assets/task.png";
 import ContactForm from "../Assets/form.png";
 import FiskerOcean from "../Assets/fiskerOcean.jpg";
 import Booker from "../Assets/Booker.jpg";
+import API from "../Assets/API.png";
 
 function Project() {
   const cardItem = [
@@ -61,6 +62,16 @@ function Project() {
         "It's a web application designed to help users organize and manage their books.",
       visitLink: "https://booker-app-chi.vercel.app",
       sourceCodeLink: "https://github.com/PatellAbhishekk/BookerApp",
+    },
+    {
+      id: 5,
+      logo: API,
+      name: "Wakati-API",
+      description:
+        "Wakati's Text Intelligence Platform empowers users with comprehensive..Coming soon ",
+      visitLink: "https://wakati.tech/",
+      sourceCodeLink: "https://github.com/PatellAbhishekk/Wakati-API",
+      textColor: "text-grey-500",
     },
   ];
 
