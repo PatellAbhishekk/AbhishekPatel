@@ -36,52 +36,52 @@ function Experience() {
       name: "TailwindCss",
     },
     {
-      id: 4,
+      id: 5,
       logo: SASS,
       name: "SCSS",
     },
     {
-      id: 5,
+      id: 6,
       logo: Git,
       name: "Git",
     },
     {
-      id: 6,
+      id: 7,
       logo: GitHub,
       name: "GitHub",
     },
     {
-      id: 7,
+      id: 8,
       logo: Vercel,
       name: "Vercel",
     },
     {
-      id: 8,
+      id: 9,
       logo: Notion,
       name: "Notion",
     },
     {
-      id: 8,
+      id: 10,
       logo: Hono,
       name: "Hono",
     },
     {
-      id: 9,
+      id: 11,
       logo: CloudFlare,
       name: "CloudFlare",
     },
     {
-      id: 9,
+      id: 12,
       logo: Bun,
       name: "Bun",
     },
     {
-      id: 10,
+      id: 13,
       logo: AcernityUI,
       name: "AcernityUI",
     },
     {
-      id: 11,
+      id: 14,
       logo: API,
       name: "API",
     },
@@ -92,9 +92,12 @@ function Experience() {
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
     >
       <div>
-        <h1 className="text-3xl mb-5">Experience</h1>
-        <p className="  ">
-          I've more than 2 years of experiance in below technologies.
+        <h1 className="animate-text bg-gradient-to-r from-green-700 via-blue-500 to-yellow-500 bg-clip-text text-transparent text-5xl font-black flex flex-col items-center justify-center ">
+          Experiences
+        </h1>
+        <br />
+        <p className=" flex flex-col items-center justify-center">
+          I've more than 2 years of experience in below technologies.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3">
           {cardItem.map(({ id, logo, name }) => (

@@ -33,8 +33,13 @@ function Contact({ theme }) {
         theme === "dark" ? "text-white" : "text-black"
       }`}
     >
-      <h1 className="text-3xl mb-4">Contact me</h1>
-      <span>Please fill out the form below to contact me</span>
+      <h1 className="animate-text bg-gradient-to-r from-blue-400 via-pink-500 to-yellow-500 bg-clip-text text-transparent text-5xl font-black flex flex-col items-center justify-center">
+        Contact me
+      </h1>
+      <br />
+      <span className="flex flex-col items-center justify-center">
+        Please fill out the form below to contact me
+      </span>
       <div className="flex flex-col items-center justify-center mt-5">
         <form
           onSubmit={handleSubmit(onSubmit)}

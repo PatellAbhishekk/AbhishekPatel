@@ -18,6 +18,7 @@ module.exports = {
       animation: {
         "shape-change-shake": "shapeChange 10s infinite, shake 0.5s infinite",
       },
+
       keyframes: {
         shapeChange: {
           "0%": { borderRadius: "50% 50% 50% 50%" }, // Circle

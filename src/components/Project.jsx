@@ -46,7 +46,7 @@ function Project() {
       textColor: "text-green-500",
     },
     {
-      id: 4,
+      id: 5,
       logo: FiskerOcean,
       name: "Fisker-Ocean",
       description:
@@ -56,7 +56,7 @@ function Project() {
       textColor: "text-orange-800",
     },
     {
-      id: 4,
+      id: 6,
       logo: Booker,
       name: "Booker-App",
       description:
@@ -65,7 +65,7 @@ function Project() {
       sourceCodeLink: "https://github.com/PatellAbhishekk/BookerApp",
     },
     {
-      id: 5,
+      id: 7,
       logo: RPS,
       name: "RPS-Game",
       description:
@@ -75,25 +75,30 @@ function Project() {
       textColor: "text-orange-400",
     },
     {
-      id: 6,
+      id: 8,
       logo: API,
       name: "Wakati-API",
       description:
         "Wakati's Text Intelligence Platform empowers users with comprehensive..Coming soon ",
       visitLink: "https://wakati.tech/",
       sourceCodeLink: "https://github.com/PatellAbhishekk/Wakati-API",
-      textColor: "text-grey-500",
+      textColor: "text-gray-700",
     },
   ];
 
   return (
     <div
       id="Project"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10 "
     >
       <div>
-        <h1 className="text-3xl mb-5">Projects</h1>
-        <span className="underline font-semibold">Featured Projects</span>
+        <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black flex flex-col items-center justify-center">
+          Projects
+        </h1>
+        <br />
+        <span className=" font-semibold flex flex-col items-center justify-center">
+          Featured Projects
+        </span>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
           {cardItem.map(
             ({

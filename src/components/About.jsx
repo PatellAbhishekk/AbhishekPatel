@@ -6,8 +6,10 @@ function About() {
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
     >
       <div>
-        <h1 className="text-3xl mb-5">About</h1>
-        <p>
+        <h1 className="mb-5 animate-text bg-gradient-to-r from-teal-400 via-teal-500 to-green-500 bg-clip-text text-transparent text-5xl font-black flex flex-col items-center justify-center">
+          About
+        </h1>
+        <p className="flex flex-col items-center justify-center ">
           Aspiring Web developer with a passion for creating visually stunning
           and user-friendly websites.
         </p>
@@ -63,7 +65,7 @@ function About() {
         </h1>
         <span>
           1. Developed and maintained web applications using the MERN stack
-          (MongoDB, Express.js, React.js, Node.js) to create dynamic and
+          ("MongoDB, Express.js, React.js, Node.js") to create dynamic and
           responsive user interfaces and robust backend systems.
           <br />
           2. Built RESTful APIs for seamless integration between frontend and
@@ -89,7 +91,9 @@ function About() {
             target="_blank"
             className="text-red-600"
           >
-            <strong>1. Web Development Basics</strong>
+            <strong className="no-underline hover:underline">
+              1. Web Development Basics
+            </strong>
           </a>
           from Springboard (by Infosys): Successfully built and deployed
           dynamic, responsive web applications using HTML, CSS, JavaScript, and
@@ -102,7 +106,9 @@ function About() {
             target="_blank"
             className="text-red-600"
           >
-            <strong>2. JavaScript Novice to Professional</strong>
+            <strong className="no-underline hover:underline">
+              2. JavaScript Novice to Professional
+            </strong>
           </a>
           course by Infosys Springboard, gaining expertise in core JavaScript
           concepts, DOM manipulation, asynchronous programming, and building
@@ -114,13 +120,16 @@ function About() {
           Mission Statement
         </h1>
         <p>
-          As a <strong>MERN Full-Stack Web Developer</strong>, my mission is to
-          create efficient, scalable, and user-centric web applications by
-          leveraging the power of MongoDB, Express.js, React.js, and Node.js. I
-          am committed to delivering high-quality, innovative solutions that
-          enhance user experience, solve real-world problems, and drive business
-          growth, while continuously evolving my skills to stay at the forefront
-          of web development technologies.
+          As a{" "}
+          <strong className="no-underline hover:underline">
+            MERN Full-Stack Web Developer
+          </strong>
+          , my mission is to create efficient, scalable, and user-centric web
+          applications by leveraging the power of MongoDB, Express.js, React.js,
+          and Node.js. I am committed to delivering high-quality, innovative
+          solutions that enhance user experience, solve real-world problems, and
+          drive business growth, while continuously evolving my skills to stay
+          at the forefront of web development technologies.
         </p>
       </div>
     </div>
