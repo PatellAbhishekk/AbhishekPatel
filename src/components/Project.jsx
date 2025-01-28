@@ -6,6 +6,7 @@ import ContactForm from "../Assets/form.png";
 import FiskerOcean from "../Assets/fiskerOcean.jpg";
 import Booker from "../Assets/Booker.jpg";
 import API from "../Assets/API.png";
+import RPS from "../Assets/RPS.png";
 
 function Project() {
   const cardItem = [
@@ -52,7 +53,7 @@ function Project() {
         "It's a modern web app built with Next.js, React, and Tailwind CSS, optimized with Turbopack",
       visitLink: "https://fisker-ocean-omega.vercel.app",
       sourceCodeLink: "https://github.com/PatellAbhishekk/Fisker-Ocean",
-      textColor: "text-orange-500",
+      textColor: "text-orange-800",
     },
     {
       id: 4,
@@ -65,6 +66,16 @@ function Project() {
     },
     {
       id: 5,
+      logo: RPS,
+      name: "RPS-Game",
+      description:
+        "learning React concepts like state, props, conditional rendering, and event handling",
+      visitLink: "https://rpsgames.pages.dev/",
+      sourceCodeLink: "https://github.com/PatellAbhishekk/RPS-Game",
+      textColor: "text-orange-400",
+    },
+    {
+      id: 6,
       logo: API,
       name: "Wakati-API",
       description:

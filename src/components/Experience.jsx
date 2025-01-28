@@ -1,13 +1,16 @@
 import React from "react";
 import javaScript from "../Assets/Js.png";
 import vite from "../Assets/vite.png";
+import Bootstrap from "../Assets/bootstrap.png";
 import tailwindCss from "../Assets/tailwindCss.png";
 import SASS from "../Assets/sass.png";
 import Git from "../Assets/git.png";
 import GitHub from "../Assets/github.png";
 import Vercel from "../Assets/vercel.svg";
 import Notion from "../Assets/notion.png";
+import Hono from "../Assets/hono.png";
 import CloudFlare from "../Assets/cloudflare.png";
+import Bun from "../Assets/bun.svg";
 import AcernityUI from "../Assets/acernityUI.png";
 import API from "../Assets/api.png";
 function Experience() {
@@ -24,6 +27,11 @@ function Experience() {
     },
     {
       id: 3,
+      logo: Bootstrap,
+      name: "boostrap",
+    },
+    {
+      id: 4,
       logo: tailwindCss,
       name: "TailwindCss",
     },
@@ -53,9 +61,19 @@ function Experience() {
       name: "Notion",
     },
     {
+      id: 8,
+      logo: Hono,
+      name: "Hono",
+    },
+    {
       id: 9,
       logo: CloudFlare,
       name: "CloudFlare",
+    },
+    {
+      id: 9,
+      logo: Bun,
+      name: "Bun",
     },
     {
       id: 10,
