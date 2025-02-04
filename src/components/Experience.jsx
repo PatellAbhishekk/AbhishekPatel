@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import javaScript from "../Assets/Js.png";
 import vite from "../Assets/vite.png";
 import Bootstrap from "../Assets/bootstrap.png";
@@ -13,79 +13,41 @@ import CloudFlare from "../Assets/cloudflare.png";
 import Bun from "../Assets/bun.svg";
 import AcernityUI from "../Assets/acernityUI.png";
 import API from "../Assets/api.png";
+
 function Experience() {
+  const [shuffledItems, setShuffledItems] = useState([]);
+
   const cardItem = [
-    {
-      id: 1,
-      logo: javaScript,
-      name: "JavaScript",
-    },
-    {
-      id: 2,
-      logo: vite,
-      name: "Vite",
-    },
-    {
-      id: 3,
-      logo: Bootstrap,
-      name: "boostrap",
-    },
-    {
-      id: 4,
-      logo: tailwindCss,
-      name: "TailwindCss",
-    },
-    {
-      id: 5,
-      logo: SASS,
-      name: "SCSS",
-    },
-    {
-      id: 6,
-      logo: Git,
-      name: "Git",
-    },
-    {
-      id: 7,
-      logo: GitHub,
-      name: "GitHub",
-    },
-    {
-      id: 8,
-      logo: Vercel,
-      name: "Vercel",
-    },
-    {
-      id: 9,
-      logo: Notion,
-      name: "Notion",
-    },
-    {
-      id: 10,
-      logo: Hono,
-      name: "Hono",
-    },
-    {
-      id: 11,
-      logo: CloudFlare,
-      name: "CloudFlare",
-    },
-    {
-      id: 12,
-      logo: Bun,
-      name: "Bun",
-    },
-    {
-      id: 13,
-      logo: AcernityUI,
-      name: "AcernityUI",
-    },
-    {
-      id: 14,
-      logo: API,
-      name: "API",
-    },
+    { id: 1, logo: javaScript, name: "JavaScript" },
+    { id: 2, logo: vite, name: "Vite" },
+    { id: 3, logo: Bootstrap, name: "Bootstrap" },
+    { id: 4, logo: tailwindCss, name: "TailwindCSS" },
+    { id: 5, logo: SASS, name: "SCSS" },
+    { id: 6, logo: Git, name: "Git" },
+    { id: 7, logo: GitHub, name: "GitHub" },
+    { id: 8, logo: Vercel, name: "Vercel" },
+    { id: 9, logo: Notion, name: "Notion" },
+    { id: 10, logo: Hono, name: "Hono" },
+    { id: 11, logo: CloudFlare, name: "CloudFlare" },
+    { id: 12, logo: Bun, name: "Bun" },
+    { id: 13, logo: AcernityUI, name: "AcernityUI" },
+    { id: 14, logo: API, name: "API" },
   ];
+
+  // Shuffle function
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap
+    }
+    return shuffled;
+  };
+
+  useEffect(() => {
+    setShuffledItems(shuffleArray(cardItem)); // Shuffle on component mount
+  }, []);
+
   return (
     <div
       id="Experience"
@@ -100,19 +62,13 @@ function Experience() {
           I've more than 2 years of experience in below technologies.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3">
-          {cardItem.map(({ id, logo, name }) => (
+          {shuffledItems.map(({ id, logo, name }) => (
             <div
               className=" flex flex-col items-center justify-center border-[2px] rounded-full md:w-[200px] md:h-[200px] shadow-md p-1 cursor-pointer hover:scale-110 duration-300"
               key={id}
             >
-              <img
-                src={logo}
-                className="w-[150px] rounded-full"
-                alt="PatellAbhishekk"
-              />
-              <div>
-                <div className="">{name}</div>
-              </div>
+              <img src={logo} className="w-[150px] rounded-full" alt={name} />
+              <div>{name}</div>
             </div>
           ))}
         </div>

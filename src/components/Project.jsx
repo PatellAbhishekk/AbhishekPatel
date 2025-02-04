@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Breed from "../Assets/breeds.png";
 import Pokemon from "../Assets/pokemon.png";
 import task from "../Assets/task.png";
@@ -9,6 +9,8 @@ import API from "../Assets/API.png";
 import RPS from "../Assets/RPS.png";
 
 function Project() {
+  const [shuffledItems, setShuffledItems] = useState([]);
+
   const cardItem = [
     {
       id: 1,
@@ -86,6 +88,20 @@ function Project() {
     },
   ];
 
+  // Shuffle function
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap
+    }
+    return shuffled;
+  };
+
+  useEffect(() => {
+    setShuffledItems(shuffleArray(cardItem)); // Shuffle on component mount
+  }, []);
+
   return (
     <div
       id="Project"
@@ -100,7 +116,7 @@ function Project() {
           Featured Projects
         </span>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
-          {cardItem.map(
+          {shuffledItems.map(
             ({
               id,
               logo,
@@ -109,43 +125,42 @@ function Project() {
               visitLink,
               sourceCodeLink,
               textColor,
-              buttonOnly,
             }) => (
               <div
-                className={`md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-110 duration-300 z-10 backdrop-blur-lg bg-transparent border-white/10 ${
-                  buttonOnly
-                    ? "flex items-center justify-center"
-                    : "hover:bg-white/20"
-                }`}
+                className={`md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-110 duration-300 z-10 backdrop-blur-lg bg-transparent border-white/10`}
                 key={id}
               >
-                {!buttonOnly && (
-                  <>
-                    <img
-                      src={logo}
-                      className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                      alt={name}
-                    />
-                    <div>
-                      <span className={`${textColor} text-xl ml-2`}>
-                        {name}
-                      </span>
-                      <p className={`${textColor} px-2`}>{description}</p>
-                    </div>
-                    <div className="px-2 py-4 space-x-3 justify-around">
-                      <a href={visitLink} target="_blank">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
-                          Visit
-                        </button>
-                      </a>
-                      <a href={sourceCodeLink} target="_blank">
-                        <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
-                          Source code
-                        </button>
-                      </a>
-                    </div>
-                  </>
-                )}
+                <>
+                  <img
+                    src={logo}
+                    className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
+                    alt={name}
+                  />
+                  <div>
+                    <span className={`${textColor} text-xl ml-2`}>{name}</span>
+                    <p className={`${textColor} px-2`}>{description}</p>
+                  </div>
+                  <div className="px-2 py-4 space-x-3 justify-around">
+                    <a
+                      href={visitLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        Visit
+                      </button>
+                    </a>
+                    <a
+                      href={sourceCodeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
+                        Source code
+                      </button>
+                    </a>
+                  </div>
+                </>
               </div>
             )
           )}
