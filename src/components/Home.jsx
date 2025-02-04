@@ -98,7 +98,7 @@ function Home() {
                   </li>
                   <li>
                     <a
-                      href="https://drive.google.com/file/d/1iar31eIubwhjXMEvO_6QrZcJX-SWYTB3/view"
+                      href="https://drive.google.com/file/d/18uJhi3ZJgJdxMXJ3oPAbyqtfYmlhBIoC/view?usp=drive_link"
                       target="_blank"
                     >
                       <TbFileCv
