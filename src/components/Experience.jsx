@@ -13,6 +13,7 @@ import CloudFlare from "../Assets/cloudflare.png";
 import Bun from "../Assets/bun.svg";
 import AcernityUI from "../Assets/acernityUI.png";
 import API from "../Assets/api.png";
+import { FaArrowDown } from "react-icons/fa";
 
 function Experience() {
   const [shuffledItems, setShuffledItems] = useState([]);
@@ -61,16 +62,27 @@ function Experience() {
         <p className=" flex flex-col items-center justify-center">
           I've more than 2 years of experience in below technologies.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3">
-          {shuffledItems.map(({ id, logo, name }) => (
-            <div
-              className=" flex flex-col items-center justify-center border-[2px] rounded-full md:w-[200px] md:h-[200px] shadow-md p-1 cursor-pointer hover:scale-110 duration-300"
-              key={id}
-            >
-              <img src={logo} className="w-[150px] rounded-full" alt={name} />
-              <div>{name}</div>
-            </div>
-          ))}
+        <br />
+        <span className="text-2xl flex justify-center items-center">
+          <FaArrowDown />
+        </span>{" "}
+        <br /> <br />
+        <div className="flex justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-7 my-3">
+            {shuffledItems.map(({ id, logo, name }) => (
+              <div
+                className="flex flex-col items-center justify-center border-[2px] rounded-full w-[150px] h-[150px] md:w-[200px] md:h-[200px] shadow-md p-4 cursor-pointer hover:scale-110 duration-300"
+                key={id}
+              >
+                <img
+                  src={logo}
+                  className="w-[80px] h-[80px] object-contain mb-2"
+                  alt={name}
+                />
+                <div className="text-center text-sm font-semibold">{name}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

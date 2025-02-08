@@ -7,6 +7,7 @@ import FiskerOcean from "../Assets/fiskerOcean.jpg";
 import Booker from "../Assets/Booker.jpg";
 import API from "../Assets/API.png";
 import RPS from "../Assets/RPS.png";
+import { FaArrowDown } from "react-icons/fa";
 
 function Project() {
   const [shuffledItems, setShuffledItems] = useState([]);
@@ -105,66 +106,68 @@ function Project() {
   return (
     <div
       id="Project"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10 "
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10 overflow-hidden"
     >
-      <div>
-        <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black flex flex-col items-center justify-center">
+      <div className="text-center">
+        <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black">
           Projects
         </h1>
         <br />
-        <span className=" font-semibold flex flex-col items-center justify-center">
-          Featured Projects
+        <span className="font-semibold">Featured Projects</span>
+        <br />
+        <span className="text-2xl flex justify-center items-center mt-4">
+          <FaArrowDown />
         </span>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
-          {shuffledItems.map(
-            ({
-              id,
-              logo,
-              name,
-              description,
-              visitLink,
-              sourceCodeLink,
-              textColor,
-            }) => (
-              <div
-                className={`md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-110 duration-300 z-10 backdrop-blur-lg bg-transparent border-white/10`}
-                key={id}
-              >
-                <>
-                  <img
-                    src={logo}
-                    className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                    alt={name}
-                  />
-                  <div>
-                    <span className={`${textColor} text-xl ml-2`}>{name}</span>
-                    <p className={`${textColor} px-2`}>{description}</p>
-                  </div>
-                  <div className="px-2 py-4 space-x-3 justify-around">
-                    <a
-                      href={visitLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
-                        Visit
-                      </button>
-                    </a>
-                    <a
-                      href={sourceCodeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
-                        Source code
-                      </button>
-                    </a>
-                  </div>
-                </>
+        <br /> <br />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-5">
+        {shuffledItems.map(
+          ({
+            id,
+            logo,
+            name,
+            description,
+            visitLink,
+            sourceCodeLink,
+            textColor,
+          }) => (
+            <div
+              className={`w-full h-auto border-[2px] rounded-lg shadow-lg p-4 cursor-pointer hover:scale-105 transition-transform duration-300 backdrop-blur-lg bg-transparent border-white/10 flex flex-col items-center text-center`}
+              key={id}
+            >
+              <img
+                src={logo}
+                className="w-[100px] h-[100px] p-1 rounded-full border-[2px] mb-4"
+                alt={name}
+              />
+              <div className="mb-4">
+                <span className={`${textColor} text-xl font-semibold block`}>
+                  {name}
+                </span>
+                <p className={`${textColor} text-sm px-2 mt-2`}>
+                  {description}
+                </p>
               </div>
-            )
-          )}
-        </div>
+              <div className="flex flex-col space-y-2 mt-auto">
+                <a href={visitLink} target="_blank" rel="noopener noreferrer">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    Visit
+                  </button>
+                </a>
+                <a
+                  href={sourceCodeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
+                    Source Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          )
+        )}
       </div>
     </div>
   );

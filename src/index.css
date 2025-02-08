@@ -12,3 +12,6 @@ body {
     @apply select-none;
   }
 }
+.custom-stroke {
+  -webkit-text-stroke: 2px black;
+}

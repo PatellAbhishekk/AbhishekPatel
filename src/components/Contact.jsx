@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import Submit from "../components/Submit";
+import { FaArrowDown } from "react-icons/fa";
 
 function Contact({ theme }) {
   const {
@@ -40,6 +41,11 @@ function Contact({ theme }) {
       <span className="flex flex-col items-center justify-center">
         Please fill out the form below to contact me
       </span>
+      <br />
+      <span className="text-2xl flex justify-center items-center">
+        <FaArrowDown />
+      </span>{" "}
+      <br /> <br />
       <div className="flex flex-col items-center justify-center mt-5">
         <form
           onSubmit={handleSubmit(onSubmit)}

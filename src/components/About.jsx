@@ -1,4 +1,6 @@
 import React from "react";
+
+import Qualification from "./Qualification";
 function About() {
   return (
     <div
@@ -6,32 +8,20 @@ function About() {
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
     >
       <div>
-        <h1 className="mb-5 animate-text bg-gradient-to-r from-teal-400 via-teal-500 to-green-500 bg-clip-text text-transparent text-5xl font-black flex flex-col items-center justify-center">
+        <h1 className="mb-5  bg-gradient-to-r from-blue-500 via-yellow-400 to-amber-500 bg-clip-text text-transparent text-5xl font-extrabold flex flex-col items-center justify-center ">
           About
         </h1>
-        <p className="flex flex-col items-center justify-center ">
-          Aspiring Web developer with a passion for creating visually stunning
+        <p className="flex flex-col items-center justify-center text-center text-base md:text-lg font-medium text-gray-700 leading-relaxed px-4">
+          Aspiring Web Developer with a passion for creating visually stunning
           and user-friendly websites.
         </p>
         <br />
 
         {/* Education & Training Section */}
         <div>
-          <div>
-            <h1 className="text-green-600 font-semibold text-xl">
-              Education & Training
-            </h1>
-            <span>
-              1. Mern FullStack Web Developer → Quality Software Technology →
-              2024
-              <br />
-              2. Bsc in Botany → Ramnirajan Junjunwala College → 2023
-            </span>
-          </div>
+          <Qualification />
         </div>
-
         <br />
-
         {/* Skills & Expertise Section */}
         <div className="flex items-center justify-between gap-5 mb-10">
           <div>
